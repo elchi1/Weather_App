@@ -16,7 +16,7 @@ app.get("/",function(req,res){
 app.post("/",function(req,res){
 
   const query = req.body.cityName; // клиент пишет свой город
-  const apiId = "15e42e42156ce98f97145bdd353d9e6b"; // наша апишка
+  const apiId = ""; // наша апишка Чтобы все сработало добавьте свой API(зарегистрируйтесь на сайте open weather и все, вам выдадут личный апи)
   const units = "metric"; // мы хотим чтобы нащы градусы показывали в метрической системе(Система Си)
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=" + units +"&appid=" + apiId;
   https.get(url,function(response){
